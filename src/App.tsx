@@ -1,35 +1,19 @@
-import "./App.css";
 import { Greet } from "./components/Greet";
-import { Person } from "./components/Person";
-import { PersonList } from "./components/PersonList";
+import { Heading } from "./components/Heading";
+import { Oscar } from "./components/Oscar";
+import { Status } from "./components/Status";
 
 function App() {
-  // temporary data init
-  const person = {
-    first: "Hitman",
-    last: "Jonathan",
-  };
-
-  const personList = [
-    {
-      first: "Bruce",
-      last: "Wayne",
-    },
-    {
-      first: "Clark",
-      last: "Kent",
-    },
-    {
-      first: "Princess",
-      last: "Diana",
-    },
-  ];
-
   return (
     <div className="App">
-      <Greet name="Hitman" messageCount={10} isLoggedIn={true} />
-      <Person data={person} />
-      <PersonList datas={personList} />
+      <Status status="success" />
+      {/* Parsing react props into child component */}
+      <Oscar>
+        <Heading>Oscar Dilahoya</Heading>
+      </Oscar>
+
+      {/* Make optional props */}
+      <Greet name="Alexandr" isLoggedIn={true} />
     </div>
   );
 }
