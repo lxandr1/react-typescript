@@ -1,4 +1,5 @@
 import { Button } from "./components/Button";
+import { Input } from "./components/Input";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
           console.log("Button click!", event, id);
         }}
       />
+      <Input value="" handleChange={(event: any) => console.log(event)} />
     </div>
   );
 }
